@@ -9,12 +9,14 @@
     <artifactId>exo.platform.sso-extension.component.sso-extensible-filter</artifactId>
     <name>eXo Platform - SSO Extension Filter config</name>
     <dependencies>
+
         <dependency>
             <groupId>org.exoplatform.portal</groupId>
             <artifactId>exo.portal.component.web.api</artifactId>
             <version>${org.exoplatform.portal.version}</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -97,43 +99,6 @@
             <version>${org.exoplatform.kernel.version}</version>
             <type>jar</type>
             <scope>provided</scope>
-            <!--
-            <exclusions>
-                <exclusion>
-                    <artifactId>exo.tool.framework.junit</artifactId>
-                    <groupId>org.exoplatform.tool</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>commons-beanutils</artifactId>
-                    <groupId>commons-beanutils</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jibx-run</artifactId>
-                    <groupId>org.jibx</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>picocontainer</artifactId>
-                    <groupId>picocontainer</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jibx-bind</artifactId>
-                    <groupId>org.jibx</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>exo.kernel.commons</artifactId>
-                    <groupId>org.exoplatform.kernel</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>jibx-extras</artifactId>
-                    <groupId>org.jibx</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>xpp3</artifactId>
-                    <groupId>xpp3</groupId>
-                </exclusion>
-            </exclusions>
-            -->
-
         </dependency>
     </dependencies>
     <build>

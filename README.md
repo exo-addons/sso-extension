@@ -276,42 +276,6 @@ Create file settings.xml in $HOME/.m2  (%HOMEPATH%\.m2 on Windows) with the foll
                              <settings>
                                <profiles>
                                  <profile>
-                                   <id>jboss-public-repository</id>
-                                   <repositories>
-                                     <repository>
-                                       <id>jboss-public-repository-group</id>
-                                       <name>JBoss Public Maven Repository Group</name>
-                                       <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-                                       <layout>default</layout>
-                                       <releases>
-                                         <enabled>true</enabled>
-                                         <updatePolicy>never</updatePolicy>
-                                       </releases>
-                                       <snapshots>
-                                         <enabled>true</enabled>
-                                         <updatePolicy>never</updatePolicy>
-                                       </snapshots>
-                                     </repository>
-                                   </repositories>
-                                   <pluginRepositories>
-                                     <pluginRepository>
-                                       <id>jboss-public-repository-group</id>
-                                       <name>JBoss Public Maven Repository Group</name>
-                                       <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-                                       <layout>default</layout>
-                                       <releases>
-                                         <enabled>true</enabled>
-                                         <updatePolicy>never</updatePolicy>
-                                       </releases>
-                                       <snapshots>
-                                         <enabled>true</enabled>
-                                         <updatePolicy>never</updatePolicy>
-                                       </snapshots>
-                                     </pluginRepository>
-                                   </pluginRepositories>
-                                 </profile>
-
-                                 <profile>
                                    <id>exo-public-repository</id>
                                    <repositories>
                                      <repository>
@@ -349,7 +313,6 @@ Create file settings.xml in $HOME/.m2  (%HOMEPATH%\.m2 on Windows) with the foll
                                </profiles>
 
                                <activeProfiles>
-                                 <activeProfile>jboss-public-repository</activeProfile>
                                  <activeProfile>exo-public-repository</activeProfile>
                                </activeProfiles>
                              </settings>
