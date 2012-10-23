@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.exoplatform.platform</groupId>
-        <artifactId>org.exoplatform.sso-extension.component</artifactId>
+        <artifactId>sso-extension-component</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>exo.platform.sso-extension.component.sso-extensible-filter</artifactId>
+    <artifactId>sso-extension-component-sso-extensible-filter</artifactId>
     <name>eXo Platform - SSO Extension Filter config</name>
     <dependencies>
 

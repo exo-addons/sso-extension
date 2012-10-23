@@ -23,7 +23,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.exoplatform.platform</groupId>
-    <artifactId>org.exoplatform.sso-extension</artifactId>
+    <artifactId>sso-extension</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>eXo Platform - SSO Extension</name>

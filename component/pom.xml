@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.exoplatform.platform</groupId>
-        <artifactId>org.exoplatform.sso-extension</artifactId>
+        <artifactId>sso-extension</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>org.exoplatform.sso-extension.component</artifactId>
+    <artifactId>sso-extension-component</artifactId>
     <packaging>pom</packaging>
     <name>eXo Platform - Parent Component Filter </name>
     <modules>

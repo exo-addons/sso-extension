@@ -311,7 +311,6 @@ Create file settings.xml in $HOME/.m2  (%HOMEPATH%\.m2 on Windows) with the foll
                                    </pluginRepositories>
                                  </profile>
                                </profiles>
-
                                <activeProfiles>
                                  <activeProfile>exo-public-repository</activeProfile>
                                </activeProfiles>
