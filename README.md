@@ -1,11 +1,9 @@
-------------
 Introduction
 ------------
 
 This extension is created to make easier the integration of an sso server within eXo Platform.
 We are going to explain the steps of integration for each SSO server: CAS, JOSSO, openAM.
 
--------------------
 System requirements
 -------------------
    
