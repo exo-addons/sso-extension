@@ -1,6 +1,7 @@
-SSO Extension for eXo Platform
-This extension is created to make easier the integration of an sso server with eXo Platform.
+SSO Extension for eXo Platform: 
+This extension is created to make easier the integration of an sso server within eXo Platform.
 We are going to explain the steps for integration for each SSO server: CAS, JOSSO, openAM.
+
 -------------------
 System requirements
 -------------------
@@ -22,7 +23,7 @@ git clone git@github.com:exo-addons/sso-extension.git
 PROJECT_HOME is the directory where you cloned the project.
 cd sso-extension
 
-1) Build the project
+2) Build the project
 -----------------------
 
 mvn clean install
@@ -34,11 +35,11 @@ After a build success of the project you will have:
 * exo.platform.sso-extension.config-0.1.jar under PROJECT_HOME/sso-extension/config/target.
 * sso-extension.ear under PROJECT_HOME/sso-extension/ear/target.
 
-How To use this extension in order to success your SSO integration
-==================================================================
+SSO integration steps:
+=======================
 
 1) CAS server
------------
+-------------
 
 - Move the jar exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar under PROJECT_HOME/sso-extension/component/sso-extensible-filter/target to PLF_HOME/lib
 - Move the jar exo.platform.sso-extension.config-0.1.jar under PROJECT_HOME/sso-extension/config/target to PLF_HOME/lib.
@@ -83,7 +84,7 @@ How To use this extension in order to success your SSO integration
                              </body>
                            </html>
 
-- Move the jars under SSO_HOME/gatein-sso-{version}/cas/gatein.ear/lib to the PLF_HOME/lib
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/lib
 - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                         ########################
@@ -100,7 +101,7 @@ How To use this extension in order to success your SSO integration
                         sso.cas.renew.ticket=false
 
 2) JOSSO server
------------
+---------------
 
 - Move the jar exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar under PROJECT_HOME/sso-extension/component/sso-extensible-filter/target to PLF_HOME/lib
 - Move the jar exo.platform.sso-extension.config-0.1.jar under PROJECT_HOME/sso-extension/config/target to PLF_HOME/lib.
@@ -159,7 +160,7 @@ How To use this extension in order to success your SSO integration
                         sso.josso.server.type=josso
 
 3) OpenAM server
- -----------
+----------------
 
  - Move the jar exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar under PROJECT_HOME/sso-extension/component/sso-extensible-filter/target to PLF_HOME/lib
  - Move the jar exo.platform.sso-extension.config-0.1.jar under PROJECT_HOME/sso-extension/config/target to PLF_HOME/lib.
