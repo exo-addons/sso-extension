@@ -42,28 +42,28 @@ SSO integration steps:
 
 1) CAS server
 -------------
-      1.1) eXo Platform with Tomcat
-      -----------------------------
+1.1) eXo Platform with Tomcat
+-----------------------------
 
-            - Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
-            - Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
-            - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/lib
-            - Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
-            - Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/lib
+- Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
+- Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
 
                         org.gatein.sso.agent.login.SSOLoginModule required;
                         org.exoplatform.services.security.j2ee.TomcatLoginModule required
                         portalContainerName=portal
                         realmName=gatein-domain;
 
-            - Edit PLF_HOME/webapps/portal.war/META-INF/context.xml and add ServletAccessValve into configuration as first sub-element of Context:
+- Edit PLF_HOME/webapps/portal.war/META-INF/context.xml and add ServletAccessValve into configuration as first sub-element of Context:
 
                         <Context path='/portal' docBase='portal' ... >
                             <Valve className='org.gatein.sso.agent.tomcat.ServletAccessValve' />
                              ...
                         </Context>
 
-            - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
+- Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                          ########################
                          # SSO-EXTENSION
@@ -78,14 +78,14 @@ SSO integration steps:
                          #Cas parameter to renew the ticket or not on each authentication
                          sso.cas.renew.ticket=false
 
-      1.2) eXo Platform with JBoss AS
-      -------------------------------
+1.2) eXo Platform with JBoss AS
+-------------------------------
 
-      - Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
-      - Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
-      - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/gatein.ear/lib
-      - Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
-      - edit gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/gatein.ear/lib
+- Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
+- edit gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
 
                          <authentication>
                              <login-module code="org.gatein.sso.agent.login.SSOLoginModule" flag="required">
@@ -98,7 +98,7 @@ SSO integration steps:
                              </login-module>
                            </authentication>
 
-      - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
+- Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                         ########################
                         # SSO-EXTENSION
@@ -116,29 +116,29 @@ SSO integration steps:
 2) JOSSO server
 ---------------
 
-       1.1) eXo Platform with Tomcat
-      -----------------------------
+1.1) eXo Platform with Tomcat
+-----------------------------
 
-      - Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
-      - Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
-      - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/josso/josso-18X/gatein.ear/lib to the PLF_HOME/lib
-      - Copy the file SSO_HOME/josso/josso-18X/gatein.ear/portal.war/WEB-INF/classes/josso-agent-config.xml into PLF_HOME/webapps/portal.war/WEB-INF/classes.
-      - Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
-      - Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/josso/josso-18X/gatein.ear/lib to the PLF_HOME/lib
+- Copy the file SSO_HOME/josso/josso-18X/gatein.ear/portal.war/WEB-INF/classes/josso-agent-config.xml into PLF_HOME/webapps/portal.war/WEB-INF/classes.
+- Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
+- Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
 
                         org.gatein.sso.agent.login.SSOLoginModule required;
                         org.exoplatform.services.security.j2ee.TomcatLoginModule required
                         portalContainerName=portal
                         realmName=gatein-domain;
 
-      - Edit PLF_HOME/webapps/portal.war/META-INF/context.xml and add ServletAccessValve into configuration as first sub-element of Context:
+- Edit PLF_HOME/webapps/portal.war/META-INF/context.xml and add ServletAccessValve into configuration as first sub-element of Context:
 
                         <Context path='/portal' docBase='portal' ... >
                             <Valve className='org.gatein.sso.agent.tomcat.ServletAccessValve' />
                              ...
                         </Context>
 
-      - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
+- Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                         ########################
                         # SSO-EXTENSION
@@ -151,15 +151,15 @@ SSO integration steps:
                         #SSO Server Type
                         sso.josso.server.type=josso
 
-      1.2) eXo Platform with JBoss AS
-      -------------------------------
+1.2) eXo Platform with JBoss AS
+-------------------------------
 
-      - Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
-      - Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
-      - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/josso/josso-18X/gatein.ear/lib to the PLF_HOME/gatein.ear/lib.
-      - Copy the file SSO_HOME/josso/josso-18X/gatein.ear/portal.war/WEB-INF/classes/josso-agent-config.xml into PLF_HOME/gatein.ear/02portal.war/WEB-INF/classes
-      - Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
-      - edit PLF_HOME/gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/josso/josso-18X/gatein.ear/lib to the PLF_HOME/gatein.ear/lib.
+- Copy the file SSO_HOME/josso/josso-18X/gatein.ear/portal.war/WEB-INF/classes/josso-agent-config.xml into PLF_HOME/gatein.ear/02portal.war/WEB-INF/classes
+- Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
+- edit PLF_HOME/gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
 
                          <authentication>
                              <login-module code="org.gatein.sso.agent.login.SSOLoginModule" flag="required">
@@ -172,7 +172,7 @@ SSO integration steps:
                              </login-module>
                            </authentication>
 
-      - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
+- Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                          ########################
                          # SSO-EXTENSION
@@ -188,28 +188,28 @@ SSO integration steps:
 3) OpenAM server
 ----------------
 
-      1.1) eXo Platform with Tomcat
-      -----------------------------
+1.1) eXo Platform with Tomcat
+-----------------------------
 
-            - Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
-            - Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
-            - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/openam/gatein.ear/lib to the PLF_HOME/lib
-            - Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
-            - Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/openam/gatein.ear/lib to the PLF_HOME/lib
+- Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
+- Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
 
                         org.gatein.sso.agent.login.SSOLoginModule required;
                         org.exoplatform.services.security.j2ee.TomcatLoginModule required
                         portalContainerName=portal
                         realmName=gatein-domain;
 
-            - Edit PLF_HOME/webapps/portal.war/META-INF/context.xml and add ServletAccessValve into configuration as first sub-element of Context:
+- Edit PLF_HOME/webapps/portal.war/META-INF/context.xml and add ServletAccessValve into configuration as first sub-element of Context:
 
                         <Context path='/portal' docBase='portal' ... >
                             <Valve className='org.gatein.sso.agent.tomcat.ServletAccessValve' />
                              ...
                         </Context>
 
-            - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
+- Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                         ########################
                         # SSO-EXTENSION
@@ -224,14 +224,14 @@ SSO integration steps:
                         #The name of the registred openAM cookie where openAM SSO ticket is stored
                         sso.openam.cookie.name=iPlanetDirectoryPro
 
-      1.2) eXo Platform with JBoss AS
-      -------------------------------
+1.2) eXo Platform with JBoss AS
+-------------------------------
 
-      - Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
-      - Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
-      - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/openam/gatein.ear/lib to the PLF_HOME/gatein.ear/lib.
-      - Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
-      - edit gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/openam/gatein.ear/lib to the PLF_HOME/gatein.ear/lib.
+- Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
+- edit gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
 
                          <authentication>
                              <login-module code="org.gatein.sso.agent.login.SSOLoginModule" flag="required">
@@ -244,7 +244,7 @@ SSO integration steps:
                              </login-module>
                            </authentication>
 
-      - Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
+- Edit PLF_HOME/gatein/conf/configuration.properties and add the following properties:
 
                           ########################
                           # SSO-EXTENSION
@@ -259,19 +259,19 @@ SSO integration steps:
                           #The name of the registred openAM cookie where openAM SSO ticket is stored
                           sso.openam.cookie.name=iPlanetDirectoryPro
 
- Troubleshooting
- ===============
+Troubleshooting
+================
 
- Maven dependencies issues
- -------------------------
+Maven dependencies issues
+-------------------------
 
- While Platform should build without any extra maven repository configuration it may happen that the build complains about missing artifacts.
+While Platform should build without any extra maven repository configuration it may happen that the build complains about missing artifacts.
 
- If you encounter this situation, please let us know via our forums (http://forum.exoplatform.org).
+If you encounter this situation, please let us know via our forums (http://forum.exoplatform.org).
 
- As a quick workaround you may try setting up maven repositories as follows.
+As a quick workaround you may try setting up maven repositories as follows.
 
- Create file settings.xml in $HOME/.m2  (%HOMEPATH%\.m2 on Windows) with the following content:
+Create file settings.xml in $HOME/.m2  (%HOMEPATH%\.m2 on Windows) with the following content:
 
                              <settings>
                                <profiles>
@@ -353,6 +353,7 @@ SSO integration steps:
                                  <activeProfile>exo-public-repository</activeProfile>
                                </activeProfiles>
                              </settings>
+
 
 Going Further
 =============
