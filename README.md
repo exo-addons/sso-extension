@@ -5,13 +5,14 @@ We are going to explain the steps for integration for each SSO server: CAS, JOSS
 -------------------
 System requirements
 -------------------
-    * Recent Git client
-    * Java Development Kit 1.6
-    * Recent Maven 3
-    * eXo Platform server 3.5.4. PLF_HOME is the location of the unzipped eXo server.
-    * The eXo server will run on port 8080, make sure this port is not currently in use
-    * Prepare an sso server (cas, openAM, JOSSO). The SSO server will run on port 8888, make sure this port is not currently in use
-    * Download the sso-packaging from this link: https://repository.jboss.org/nexus/content/groups/public/org/gatein/sso/sso-packaging/1.1.1-GA/. SSO_HOME refers to the directory where you made your download.
+   
+* Recent Git client
+* Java Development Kit 1.6
+* Recent Maven 3
+* eXo Platform server 3.5.4. PLF_HOME is the location of the unzipped eXo server.
+* The eXo server will run on port 8080, make sure this port is not currently in use
+* Prepare an sso server (cas, openAM, JOSSO). The SSO server will run on port 8888, make sure this port is not currently in use
+* Download the sso-packaging from this link: https://repository.jboss.org/nexus/content/groups/public/org/gatein/sso/sso-packaging/1.1.1-GA/. SSO_HOME refers to the directory where you made your download.
 
 Build instructions
 ==================
