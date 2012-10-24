@@ -23,7 +23,7 @@ Build instructions
 
 * git clone git@github.com:exo-addons/sso-extension.git
 * {PROJECT_HOME}: refers to the directory where you cloned the project.
-* cd sso-extension
+* cd PROJECT_HOME/sso-extension
 
 2) Build the project
 -----------------------
