@@ -33,8 +33,8 @@ mvn clean install
 After a build success of the project you will have under the target folder:
 
 * PROJECT_HOME/sso-extension/webapp/target/sso-extension.war -> Contains the configuration files of the integration with eXo platform on tomcat.
-* PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar -> Contains the filters to add.
-* PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar -> it's the activation jar of our extension.
+* PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension.component.sso-extensible-filter-0.1-SNAPSHOT.jar -> Contains the filters to add.
+* PROJECT_HOME/sso-extension/config/target/sso-extension.config-0.1-SNAPSHOT.jar -> it's the activation jar of our extension.
 * PROJECT_HOME/sso-extension/ear/target/sso-extension.ear -> Contains the configuration files of the integration with eXo platform on JBoss AS.
 
 SSO integration steps:
@@ -45,10 +45,10 @@ SSO integration steps:
 1.1) eXo Platform with Tomcat
 -----------------------------
 
-- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
-- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
-- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension-component-sso-extensible-filter-0.1-SNAPSHOT.jar to PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/sso-extension-config-0.1-SNAPSHOT.jar to PLF_HOME/lib.
 - Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
+- Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/lib
 - Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
 
                         org.gatein.sso.agent.login.SSOLoginModule required;
@@ -81,8 +81,8 @@ SSO integration steps:
 1.2) eXo Platform with JBoss AS
 -------------------------------
 
-- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
-- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension.component.sso-extensible-filter-0.1-SNAPSHOT.jar to PLF_HOME/gatein.ear/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/sso-extension.config-0.1-SNAPSHOT.jar to PLF_HOME/gatein.ear/lib.
 - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/cas/gatein.ear/lib to the PLF_HOME/gatein.ear/lib
 - Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
 - edit gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
@@ -119,8 +119,8 @@ SSO integration steps:
 1.1) eXo Platform with Tomcat
 -----------------------------
 
-- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
-- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension.component.sso-extensible-filter-0.1-SNAPSHOT.jar to PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/sso-extension.config-0.1-SNAPSHOT.jar to PLF_HOME/lib.
 - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/josso/josso-18X/gatein.ear/lib to the PLF_HOME/lib
 - Copy the file SSO_HOME/josso/josso-18X/gatein.ear/portal.war/WEB-INF/classes/josso-agent-config.xml into PLF_HOME/webapps/portal.war/WEB-INF/classes.
 - Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
@@ -154,8 +154,8 @@ SSO integration steps:
 1.2) eXo Platform with JBoss AS
 -------------------------------
 
-- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
-- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension.component.sso-extensible-filter-0.1-SNAPSHOT.jar to PLF_HOME/gatein.ear/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/sso-extension.config-0.1-SNAPSHOT.jar to PLF_HOME/gatein.ear/lib.
 - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/josso/josso-18X/gatein.ear/lib to the PLF_HOME/gatein.ear/lib.
 - Copy the file SSO_HOME/josso/josso-18X/gatein.ear/portal.war/WEB-INF/classes/josso-agent-config.xml into PLF_HOME/gatein.ear/02portal.war/WEB-INF/classes
 - Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
@@ -191,8 +191,8 @@ SSO integration steps:
 1.1) eXo Platform with Tomcat
 -----------------------------
 
-- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/lib
-- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/lib.
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension.component.sso-extensible-filter-0.1-SNAPSHOT.jar to PLF_HOME/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/sso-extension.config-0.1-SNAPSHOT.jar to PLF_HOME/lib.
 - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/openam/gatein.ear/lib to the PLF_HOME/lib
 - Move the war PROJECT_HOME/sso-extension/webapp/target/sso-extension.war to PLF_HOME/webapp.
 - Edit PLF_HOME/conf/jaas.conf, uncomment on this section and comment other parts:
@@ -227,8 +227,8 @@ SSO integration steps:
 1.2) eXo Platform with JBoss AS
 -------------------------------
 
-- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/exo.platform.sso-extension.component.sso-extensible-filter-0.1.jar to PLF_HOME/gatein.ear/lib
-- Move the jar PROJECT_HOME/sso-extension/config/target/exo.platform.sso-extension.config-0.1.jar to PLF_HOME/gatein.ear/lib.
+- Move the jar PROJECT_HOME/sso-extension/component/sso-extensible-filter/target/sso-extension.component.sso-extensible-filter-0.1-SNAPSHOT.jar to PLF_HOME/gatein.ear/lib
+- Move the jar PROJECT_HOME/sso-extension/config/target/sso-extension.config-0.1-SNAPSHOT.jar to PLF_HOME/gatein.ear/lib.
 - Move the jars under SSO_HOME/gatein-sso-1.1.1-GA/openam/gatein.ear/lib to the PLF_HOME/gatein.ear/lib.
 - Move the ear PROJECT_HOME/sso-extension/ear/target/so-extension.ear to PLF_HOME/server/default/deploy.
 - edit gatein.ear/META-INF/gatein-jboss-beans.xml and uncomment on this section:
