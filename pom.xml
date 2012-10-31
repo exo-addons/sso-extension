@@ -22,12 +22,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.exoplatform</groupId>
+        <artifactId>exo.parent</artifactId>
+        <version>7.1</version>
+        <relativePath/>
+    </parent>
     <groupId>org.exoplatform.platform</groupId>
     <artifactId>sso-extension</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>eXo Platform - SSO Extension</name>
 
+    <scm>
+        <connection>scm:git:git://github.com/exo-addons/blog-extension.git</connection>
+        <developerConnection>scm:git:git@github.com:exo-addons/blog-extension.git</developerConnection>
+        <url>https://github.com/exo-addons/blog-extension</url>
+    </scm>
     <properties>
         <org.exoplatform.portal.version>3.2.5-PLF</org.exoplatform.portal.version>
         <org.exoplatform.kernel.version>2.3.8-GA</org.exoplatform.kernel.version>
